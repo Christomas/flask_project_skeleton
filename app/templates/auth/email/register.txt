@@ -1,0 +1,8 @@
+{{ user.uername }}女士/先生：
+您好！感谢注册本网站。
+请点击以下链接确认您的邮箱地址：
+{{ url_for('auth.register', email=user.email, token=token, _external=True) }}
+如果您并未注册本网站，您的邮件地址可能被他人冒用，打扰致歉，请自动忽略本邮件。
+
+致以最诚挚的问候！
+Flasky团队

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block page_header %}
+<h1>{% if current_user.is_authenticated %}{{ current_user.username }}，老朋友，我们又见面了{% else %}啊～～一个新的朋友{% endif %}！</h1>
+{# <p>{{ now }}</p>
+<p>{{ moment(now).format('L') }}</p>
+<p>{{ moment(now).format('LL') }}</p>
+<p>{{ moment(now).format('LLL') }}</p>
+<p>{{ moment(now).format('LLLL') }}</p>
+<p>{{ moment(now).fromNow(refresh=True) }}</p>
+{% endblock %}
+{% block page_content %}
+{{ wtf.quick_form(form) }} #}
+{% endblock %}
